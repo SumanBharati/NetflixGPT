@@ -34,4 +34,9 @@
 
 - useRef hook
 - firebase setup
-- deployed our app to production
+- Deployed our app to production
+- Created sign up user account
+- Implemented sign in user API
+- Created Redux store with user slice
+- Impleted sign out
+- Update Profile API call
