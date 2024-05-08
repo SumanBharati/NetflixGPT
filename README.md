@@ -3,34 +3,12 @@
 - Create react app
 - Configure Tailwind CSS
 - Routing
-  - npm i -D react-router-dom
-  Code sample:  import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
-                const Body = () => {
-                    const appRouter = createBrowserRouter([
-                        {
-                            path: '/',
-                            element: <Login />,
-                        },
-                        {
-                            path: '/browse',
-                            element: <Browse />,
-                        }
-                    ]);
-
-                    return (
-                        <div>
-                            <RouterProvider router={appRouter} />
-                        </div>
-                    );
-                };
 - Header
 - Sign In/Login Form
 - Sign Up Form
-* When I was using button tag inside my form to switch between sign in and sign up form, the page was getting refreshed on every click of the button, that's because the form was trying to get submitted but we don't want the form to submit as a result of sign in/sign up form view toggle so we have to use 'onSubmit={(e) => e.preventDefault()}' inside form tag. This is not a React problem, it's a web problem.
 
 - Form Validation 
-* We can use libraries too for form validations like Formik when working with big forms.
+(We can use libraries too for form validations like Formik when working with big forms.)
 
 - useRef hook
 - firebase setup
@@ -53,8 +31,10 @@
 - Fetch data for Background video trailer inside MainContainer
 - Update the trailer video data in the store
 - Embed the youtube video and make it autoplay and mute
-- Tailwind CSS to make the mainContainer look good
-- 
+- Tailwind CSS to make the mainContainer look good 
 
 
-* We might see a lot of things getting logged twice in our console in development because of React.strictmode. React does this extra rendering to check for any inconsistancy between calls in our app, it does not happen in production however, it only happens in development mode. It throws some error if it finds any issue.
+FINDINGS:
+1.When I was using button tag inside my form to switch between sign in and sign up form, the page was getting refreshed on every click of the button, that's because the form was trying to get submitted but we don't want the form to submit as a result of sign in/sign up form view toggle so we have to use 'onSubmit={(e) => e.preventDefault()}' inside form tag. This is not a React problem, it's a web problem.
+
+2.We might see a lot of things getting logged twice in our console in development because of React.strictmode. React does this extra rendering to check for any inconsistancy between calls in our app, it does not happen in production however, it only happens in development mode. It throws some error if it finds any issue.
