@@ -40,3 +40,21 @@
 - Created Redux store with user slice
 - Impleted sign out
 - Update Profile API call
+- Bug fix: 1. Sign up user display name and profile picture update
+           2. If the  user is not logged-in, redirect '/browse' to Login page ('/'), and vice-versa.
+- Unsubscribed to the onAuthStateChange callback
+- Add hardcoded values to constants file inside utils
+- Register in TMDB API, create an app and get access token
+- Get data from TMDB now playing movies list API
+- Custom hook for Now playing Movies
+- Create movieSlice
+- Update store with movies data
+- Planning data for MainContainer and Secondary Container
+- Fetch data for Background video trailer inside MainContainer
+- Update the trailer video data in the store
+- Embed the youtube video and make it autoplay and mute
+- Tailwind CSS to make the mainContainer look good
+- 
+
+
+* We might see a lot of things getting logged twice in our console in development because of React.strictmode. React does this extra rendering to check for any inconsistancy between calls in our app, it does not happen in production however, it only happens in development mode. It throws some error if it finds any issue.
