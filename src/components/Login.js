@@ -9,7 +9,7 @@ import {
 import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
- import { PROFILE_PICTURE } from "../utils/constants"
+ import { PROFILE_PICTURE, BACKGROUND_IMAGE } from "../utils/constants"
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -87,7 +87,7 @@ const Login = () => {
       <Header />
       <div className="absolute">
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/058eee37-6c24-403a-95bd-7d85d3260ae1/5030300f-ed0c-473a-9795-a5123d1dd81d/US-en-20240422-POP_SIGNUP_TWO_WEEKS-perspective_WEB_0941c399-f3c4-4352-8c6d-0a3281e37aa0_medium.jpg"
+          src={BACKGROUND_IMAGE}
           alt="background-img"
         />
       </div>

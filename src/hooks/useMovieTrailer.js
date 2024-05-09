@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { API_OPTIONS } from "../utils/constants";
 import { addTrailerVideo } from "../utils/movieSlice";
@@ -14,8 +14,9 @@ const useMovieTrailer = (movieId) => {
     );
 
     const json = await data.json();
+    console.log(json.results);
     const filteredData = json.results.filter(
-      (video) => video.type === "Teaser"
+      (video) => video.type === "Trailer"
     );
     const trailer = filteredData.length ? filteredData[0] : json.results[0];
     dispatch(addTrailerVideo(trailer));
