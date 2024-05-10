@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { onAuthStateChanged } from "firebase/auth";
 import { addUser, removeUser } from "../utils/userSlice";
 import { NETFLIX_LOGO, SUPPORTED_LANGUAGES } from "../utils/constants";
-import { setGPTSearchView, hideGPTSearchView } from "../utils/gptSlice";
+import { setGPTSearchView, hideGPTSearchView, removeGPTMovies } from "../utils/gptSlice";
 import { changeLanguage } from "../utils/configSlice";
 import { hideHomePageView, setHomePageView } from "../utils/homeSlice";
 
@@ -54,6 +54,7 @@ const Header = () => {
   const handleHomePageView = () => {
     dispatch(hideGPTSearchView());
     dispatch(setHomePageView());
+    dispatch(removeGPTMovies())
   };
 
   const handleLanguageChange = (e) => {

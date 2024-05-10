@@ -45,6 +45,8 @@ FINDINGS:
 
 2. We might see a lot of things getting logged twice in our console in development because of React.strictmode. React does this extra rendering to check for any inconsistancy between calls in our app, it does not happen in production however, it only happens in development mode. It throws some error if it finds any issue.
 
+3. '.env' file: Keep all the secret information like keys inside this file. Basically all the sensitive information needs to be stored in this .env file and not in constants file, because when we create bundle, the constants file will also be the part of our bundle and will be shipped to the browser, and a hacker might get these sensitive information from the bundle file, therefore we should be careful of such things. And we should keep our env file inside gitIgnore, thus when we'll push our code to git, the env file will not be pushed. Now when we'll deploy the code we'll do the env configuration. In windows we have to sometimes set environment variable similarly we'll set the environment variable where we are hoisting our app. Suppose we are hoisting our app on a server, then we'll get these environment variable pushed over there. Every hoisting platform have there own way of adding environment variables.
+
 TO BE ADDED:
 - left and Right scroll buttons on movie card
 - After login make the header navmenu opaque
